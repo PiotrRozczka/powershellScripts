@@ -55,9 +55,9 @@ public static void LeftClickAtPoint(int x, int y)
     input[0].mi.dy = y*(65535/System.Windows.Forms.Screen.PrimaryScreen.Bounds.Height);
     input[0].mi.dwFlags = MOUSEEVENTF_MOVED | MOUSEEVENTF_ABSOLUTE;
     //Left mouse button down
-    input[1].mi.dwFlags = MOUSEEVENTF_LEFTDOWN;
+    input[1].mi.dwFlags = MOUSEEVENTF_RIGHTDOWN;
     //Left mouse button up
-    input[2].mi.dwFlags = MOUSEEVENTF_LEFTUP;
+    input[2].mi.dwFlags = MOUSEEVENTF_RIGHTUP;
     SendInput(3, input, Marshal.SizeOf(input[0]));
 }
 }
